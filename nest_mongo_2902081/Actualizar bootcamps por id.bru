@@ -1,0 +1,21 @@
+meta {
+  name: Actualizar bootcamps por id
+  type: http
+  seq: 4
+}
+
+patch {
+  url: http://localhost:3000/bootcamps/672ccd0dad883d8be7b9c133
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name":"FUNDMENTOS JAVA"
+  }
+}

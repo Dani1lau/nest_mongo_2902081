@@ -1,0 +1,25 @@
+meta {
+  name: Crear courses
+  type: http
+  seq: 14
+}
+
+post {
+  url: http://localhost:3000/courses?Content-Type=application/json
+  body: json
+  auth: none
+}
+
+params:query {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "HABLAR EN PUBLICO",
+    "phone": "5165561",
+    "address": "Calle 56 #48",
+    "averageRating": 3,
+    "createAt": "2024-12-07"
+  }
+}

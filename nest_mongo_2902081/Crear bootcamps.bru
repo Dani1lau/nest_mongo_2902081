@@ -1,0 +1,25 @@
+meta {
+  name: Crear bootcamps
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/bootcamps?Content-Type=application/json
+  body: json
+  auth: none
+}
+
+params:query {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "",
+    "phone": "35661560",
+    "address": "Calle 85 #48",
+    "averageRating": 3,
+    "createAt": "2024-10-07"
+  }
+}
