@@ -1,0 +1,23 @@
+meta {
+  name: Crear sponsor
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/sponsor?Content-Type=application/json
+  body: json
+  auth: none
+}
+
+params:query {
+  Content-Type: application/json
+}
+
+body:json {
+  
+  {
+    "name": "SIIGO",
+    "nit": "23424234-6"
+  }
+}

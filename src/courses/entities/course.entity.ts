@@ -1,5 +1,12 @@
 import { Schema, Prop, SchemaFactory } from "@nestjs/mongoose";
 import { Document, Double, Timestamp } from "mongodb";
+import { Types } from "mongoose";
+
+export enum minimumSkill {
+    Beginner = "Beginner",
+    Intermediate = "Intermediate",
+    Advanced = "Advanced"
+}
 
 @Schema()
 export class Course {
@@ -16,18 +23,15 @@ export class Course {
     @Prop()
     tuition: number
 
-    @Prop()
-    minimum_skill: minimumSkill
+    @Prop({ enum: minimumSkill })  
+    minimum_skill: minimumSkill;
 
     @Prop()
     createAt: Timestamp
 
-}
+    @Prop({type: [{name: {type: String}, color: {type: String}}]})
+    skills: Types.Array<Record<string, any>>
 
-enum minimumSkill{
-    "Beginner",
-    "Intermediate",
-    "Advance"
 }
 
 export const CourseSchema = SchemaFactory.createForClass(Course)

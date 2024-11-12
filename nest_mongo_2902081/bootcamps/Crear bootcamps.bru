@@ -1,0 +1,41 @@
+meta {
+  name: Crear bootcamps
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/bootcamps?Content-Type=application/json
+  body: json
+  auth: none
+}
+
+params:query {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "GESTION DE PROYECTOS",
+    "phone": 1554561,
+    "address": "Calle 122 #81",
+    "averageRating": 4,
+    "createAt": "2024-11-12",
+    "category": {
+      "name":"AGILES",
+      "description":"METODOLOGIAS AGILES"
+    },
+    "sponsor": "67336a5a7661cf8dfa6a5526",
+    "skills":[
+      {
+        "name":"ANALISIS REQUISITOS",
+        "color":"red"
+      },
+      {
+        "name":"HISTORIAS USUARIO",
+        "color":"green"
+      }
+    ]
+  }
+  
+}

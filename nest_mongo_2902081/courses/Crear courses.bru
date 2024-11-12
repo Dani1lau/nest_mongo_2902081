@@ -1,0 +1,36 @@
+meta {
+  name: Crear courses
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/courses?Content-Type=application/json
+  body: json
+  auth: none
+}
+
+params:query {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "title": "LO QUE HAGA",
+    "description": "Hola como le va :(",
+    "weeks": 2,
+    "tuition": 4,
+    "minimum_skill": "Beginner",
+    "createAt": "2024-11-07",
+    "skills":[
+      {
+        "name":"ANALISIS",
+        "color":"red"
+      },
+      {
+        "name":"HISTORIAS",
+        "color":"green"
+      }
+    ]
+  }
+}

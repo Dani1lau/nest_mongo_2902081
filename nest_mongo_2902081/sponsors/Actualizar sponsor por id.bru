@@ -1,0 +1,21 @@
+meta {
+  name: Actualizar sponsor por id
+  type: http
+  seq: 4
+}
+
+patch {
+  url: http://localhost:3000/bootcamps/672ce8ad57cfa775972ca48b
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name":"FUNDMENTOSNODEJS"
+  }
+}

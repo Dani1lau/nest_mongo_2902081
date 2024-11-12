@@ -6,11 +6,12 @@ import { ReviewsModule } from './reviews/reviews.module';
 import { UsersModule } from './users/users.module';
 import { CoursesModule } from './courses/courses.module';
 import { MongooseModule } from '@nestjs/mongoose';
+import { SponsorModule } from './sponsor/sponsor.module';
 
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://localhost:27017/nest_mongo_2902081'),
-    BootcampsModule, ReviewsModule, UsersModule, CoursesModule],
+    BootcampsModule, ReviewsModule, UsersModule, CoursesModule, SponsorModule],
   controllers: [AppController],
   providers: [AppService],
 })
